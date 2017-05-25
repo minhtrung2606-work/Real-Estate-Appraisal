@@ -1,0 +1,53 @@
+.app-left-nav-container {
+  position: relative;
+  cursor: pointer;
+}
+
+/*ELEMENT*/
+.app-left-nav-container .header {
+  min-height: 48px;
+}
+.app-left-nav-container .icon {
+  min-width: 40px;
+}
+.app-left-nav-container .title {
+  margin-left: 8px;
+}
+.app-left-nav-container .app-left-nav-menu-item.active .header {
+  background-color: #76badf;
+  color: #eefcff;
+  font-weight: bold;
+}
+.app-left-nav-container .menu-item-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.app-left-nav-container .menu-item {
+  min-height: 40px;
+}
+.app-left-nav-container .menu-item:hover,
+.app-left-nav-container .menu-item.active {
+  background-color: #142a2f;
+  color: #eff0f0;
+}
+.app-left-nav-container .statistic {
+  padding: 5px 8px 3px;
+  border-radius: 25px;
+  font-weight: bolder;
+}
+
+/*STYLE*/
+.app-left-nav-container * {
+  font-size: 12px;
+  font-weight: bold;
+}
+.app-left-nav-container .bg-color {
+  background-color: #010001;
+}
+.app-left-nav-container .text-color {
+  color: #686868;
+}
+.app-left-nav-container .text-color-as-bg {
+  background-color: #686868;
+}

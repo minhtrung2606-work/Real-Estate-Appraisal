@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+/*GLOBAL STYLE*/
+.app-bg-color {
+  background-color: #76badf;
+}
+.app-request-record {
+  color: #daf9bc;
+  background-color: #a0c376;
+}
+.app-pending-assignment {
+  color: #bcf2f8;
+  background-color: #008c8a;
+}
+.app-pending-appraisal {
+  color: #f4d98c;
+  background-color: #c18c00;
+}
+.app-pending-inspection {
+  color: #bcf4f8;
+  background-color: #2789b7;
+}
+.app-pending-review {
+  color: #b6f4c3;
+  background-color: #278d2c;
+}
+.app-pending-release-approval {
+  color: #f8d7f2;
+  background-color: #be5580;
+}
+.app-pending-release-certificate {
+  color: #d9def8;
+  background-color: #5b59bd;
+}
+
+/*FLEX BOX*/
+.app-flex-box {
+  display: flex;
+}
+.app-flex-box.align-items-center {
+  align-items: center;
+}
+.app-flex-box.justify-content-center {
+  justify-content: center;
+}
+.app-flex-box .align-right {
+  margin-left: auto;
+}

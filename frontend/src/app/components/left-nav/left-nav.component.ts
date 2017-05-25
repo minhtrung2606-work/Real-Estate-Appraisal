@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-left-nav',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./left-nav.component.css']
 })
 export class LeftNavComponent implements OnInit {
+  abstract;
+
+  @HostBinding('attr.class') cssClass = 'app-left-nav';
 
   constructor() { }
 
