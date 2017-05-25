@@ -6,6 +6,9 @@ import { LeftNavComponent } from './left-nav/left-nav.component';
   imports: [
     CommonModule
   ],
-  declarations: [LeftNavComponent]
+  declarations: [LeftNavComponent],
+  exports: [
+    LeftNavComponent
+  ]
 })
 export class ComponentsModule { }
