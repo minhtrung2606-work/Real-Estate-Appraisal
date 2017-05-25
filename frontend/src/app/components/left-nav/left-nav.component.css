@@ -2,6 +2,19 @@
   position: relative;
   cursor: pointer;
 }
+.app-left-nav-container.collapsed {
+  max-width: 40px;
+}
+.app-left-nav-container.collapsed .menu-item-list,
+.app-left-nav-container.collapsed .title,
+.app-left-nav-container.collapsed .icon.align-right {
+  display: none;
+}
+.app-left-nav-container.collapsed .header:hover,
+.app-left-nav-container.collapsed .app-left-nav-menu-item.active .header {
+  background-color: inherit;
+  color: inherit;
+}
 
 /*ELEMENT*/
 .app-left-nav-container .header {
