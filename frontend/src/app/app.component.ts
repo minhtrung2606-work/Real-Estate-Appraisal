@@ -48,7 +48,6 @@ export class AppComponent {
 
   constructor() {
     this.leftNavMenuItemList = constructLeftNav(leftNavJson);
-    console.log(this.leftNavMenuItemList);
   }
 }
 
