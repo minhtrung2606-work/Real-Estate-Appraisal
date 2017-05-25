@@ -26,10 +26,12 @@
 .app-left-nav-container .menu-item {
   min-height: 40px;
 }
+.app-left-nav-container .header:hover,
 .app-left-nav-container .menu-item:hover,
 .app-left-nav-container .menu-item.active {
   background-color: #142a2f;
   color: #eff0f0;
+  transition: all 250ms;
 }
 .app-left-nav-container .statistic {
   padding: 5px 8px 3px;

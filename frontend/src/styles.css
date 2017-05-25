@@ -31,6 +31,9 @@
   color: #d9def8;
   background-color: #5b59bd;
 }
+.app-transition-all {
+  transition: all 250ms;
+}
 
 /*FLEX BOX*/
 .app-flex-box {
