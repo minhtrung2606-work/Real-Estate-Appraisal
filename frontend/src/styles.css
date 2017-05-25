@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 /*GLOBAL STYLE*/
+.app-no-margin {
+  margin: 0;
+}
+.app-full-v-height {
+  height: 100vh;
+}
 .app-bg-color {
   background-color: #76badf;
 }

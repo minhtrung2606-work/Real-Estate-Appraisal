@@ -1,9 +1,12 @@
 .app-left-nav-container {
   position: relative;
   cursor: pointer;
+  background-color: #0c0b0d;
+  width: 250px;
 }
 .app-left-nav-container.collapsed {
   max-width: 40px;
+  display: inline-block;
 }
 .app-left-nav-container.collapsed .menu-item-list,
 .app-left-nav-container.collapsed .title,
@@ -51,18 +54,13 @@
   border-radius: 25px;
   font-weight: bolder;
 }
+.app-left-nav-container .app-left-nav-menu-item {
+  background-color: #010001;
+  color: #686868;
+}
 
 /*STYLE*/
 .app-left-nav-container * {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
-}
-.app-left-nav-container .bg-color {
-  background-color: #010001;
-}
-.app-left-nav-container .text-color {
-  color: #686868;
-}
-.app-left-nav-container .text-color-as-bg {
-  background-color: #686868;
 }
