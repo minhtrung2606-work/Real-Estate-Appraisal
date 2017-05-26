@@ -10,15 +10,14 @@ export class LeftNavComponent implements OnInit {
   abstract;
 
   @HostBinding('attr.class') cssClass = 'app-left-nav';
-  @Input() itemList:Array<LeftNavMenuItem>;
+  @Input() itemList: Array<LeftNavMenuItem>;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  hasMenuItemList(menuItem:LeftNavMenuItem): boolean {
-    return menuItem && menuItem.hasMenuItemList();
+  getItemList(): Array<LeftNavMenuItem> {
+    return this.itemList;
   }
-
 }

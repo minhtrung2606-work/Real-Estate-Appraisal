@@ -1,9 +1,9 @@
 import { LeftNavSubMenuItem } from './left-nav-sub-menu-item';
 
 export class LeftNavMenuItem {
-  public title:string;
-  public faIconClass:string;
-  public menuItemList:Array<LeftNavSubMenuItem>;
+  private title: string;
+  private faIconClass: string;
+  private menuItemList: Array<LeftNavSubMenuItem>;
 
   constructor(title = 'Unknown', faIconClass?:string) {
     this.title = title;
@@ -11,7 +11,7 @@ export class LeftNavMenuItem {
     this.menuItemList = [];
   }
 
-  addMenuItem(subMenuItem:LeftNavSubMenuItem):LeftNavMenuItem {
+  addMenuItem(subMenuItem: LeftNavSubMenuItem): LeftNavMenuItem {
     this.menuItemList.push(subMenuItem);
     return this;
   }
@@ -22,5 +22,13 @@ export class LeftNavMenuItem {
 
   getMenuItemList(): Array<LeftNavSubMenuItem> {
     return this.menuItemList;
+  }
+
+  getFaIconClass(): string {
+    return this.faIconClass;
+  }
+
+  getTitle(): string {
+    return this.title;
   }
 }

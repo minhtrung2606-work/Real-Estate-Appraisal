@@ -1,6 +1,6 @@
 export class LeftNavSubMenuItem {
-  public title:string;
-  public count:number;
+  private title:string;
+  private count:number;
 
   constructor(title = 'Unknown', count = null) {
     this.title = title;
@@ -13,5 +13,9 @@ export class LeftNavSubMenuItem {
 
   getStatisticInfo(): number {
     return this.count;
+  }
+
+  getTitle(): string {
+    return this.title;
   }
 }

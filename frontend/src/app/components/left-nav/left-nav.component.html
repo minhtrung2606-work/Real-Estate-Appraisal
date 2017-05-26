@@ -1,13 +1,13 @@
 <div class="app-left-nav-container app-full-v-height">
-  <div class="app-left-nav-menu-item bg-color text-color" *ngFor="let menuItem of itemList">
+  <div class="app-left-nav-menu-item bg-color text-color" *ngFor="let menuItem of getItemList()">
     <div class="header app-transition-all app-flex-box align-items-center">
-      <span class="icon app-flex-box justify-content-center"><i class="fa {{menuItem.faIconClass}}"></i></span>
-      <span class="title">{{menuItem.title}}</span>
+      <span class="icon app-flex-box justify-content-center"><i class="fa {{menuItem.getFaIconClass()}}"></i></span>
+      <span class="title">{{menuItem.getTitle()}}</span>
     </div>
     <ul class="menu-item-list bg-color" *ngIf="menuItem.hasMenuItemList()">
       <li class="menu-item app-flex-box align-items-center" *ngFor="let subMenuItem of menuItem.getMenuItemList()">
         <span class="icon app-flex-box justify-content-center"><i class="fa fa-angle-right"></i></span>
-        <span class="title">{{subMenuItem.title}}</span>
+        <span class="title">{{subMenuItem.getTitle()}}</span>
 
         <div class="icon app-flex-box justify-content-center align-right" *ngIf="subMenuItem.hasStatisticInfo()">
           <span class="statistic app-request-record">{{subMenuItem.getStatisticInfo()}}</span>
