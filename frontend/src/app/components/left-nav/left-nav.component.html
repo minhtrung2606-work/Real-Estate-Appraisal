@@ -1,11 +1,12 @@
 <div class="app-left-nav-container app-full-v-height">
   <div class="app-left-nav-menu-item bg-color text-color" *ngFor="let menuItem of getItemList()"
-       (click)="onMenuItemClicked(menuItem)" [ngClass]="{'active': isMenuItemActivated(menuItem)}">
-    <div class="header app-transition-all app-flex-box align-items-center">
+       [ngClass]="{'active': isMenuItemActivated(menuItem)}">
+    <div class="header app-transition-all app-flex-box align-items-center"
+         (click)="onMenuItemClicked(menuItem)">
       <span class="icon app-flex-box justify-content-center"><i class="fa {{menuItem.getFaIconClass()}}"></i></span>
       <span class="title">{{menuItem.getTitle()}}</span>
       <span class="icon app-flex-box justify-content-center align-right" *ngIf="menuItem.hasMenuItemList()">
-         <i class="fa fa-plus-circle"></i>
+         <i class="fa {{isMenuItemActivated(menuItem) ? 'fa-minus-circle' : 'fa-plus-circle'}}"></i>
       </span>
     </div>
     <ul class="menu-item-list bg-color" *ngIf="menuItem.hasMenuItemList()">
