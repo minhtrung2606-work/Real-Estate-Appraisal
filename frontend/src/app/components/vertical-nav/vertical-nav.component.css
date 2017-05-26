@@ -25,6 +25,7 @@
 
 /*STYLE*/
 .app-vertical-nav-container * {
+  font-size: 12px;
   color: #524542;
 }
 .app-vertical-nav-container .menu-item.active {

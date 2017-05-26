@@ -1,70 +1,11 @@
 <div class="app-vertical-nav-container">
   <ul class="menu-item-list">
-    <li class="menu-item app-flex-box align-items-center app-transition-all">
+    <li class="menu-item app-flex-box align-items-center app-transition-all"
+      *ngFor="let menuItem of menuItemList">
       <span class="icon app-flex-box align-items-center justify-content-center">
-        <i class="fa fa-angle-left"></i>
+        <i class="fa {{menuItem.getFaIconClass() || defaultFaIconClass}}"></i>
       </span>
-      <span class="title">Pháp lý</span>
-    </li>
-    <li class="menu-item app-flex-box align-items-center app-transition-all active">
-      <span class="icon app-flex-box align-items-center justify-content-center">
-        <i class="fa fa-angle-left"></i>
-      </span>
-      <span class="title">Tài liệu đính kèm</span>
-    </li>
-    <li class="menu-item app-flex-box align-items-center app-transition-all">
-      <span class="icon app-flex-box align-items-center justify-content-center">
-        <i class="fa fa-angle-left"></i>
-      </span>
-      <span class="title">Vị trí</span>
-    </li>
-    <li class="menu-item app-flex-box align-items-center app-transition-all">
-      <span class="icon app-flex-box align-items-center justify-content-center">
-        <i class="fa fa-angle-left"></i>
-      </span>
-      <span class="title">Đất</span>
-    </li>
-    <li class="menu-item app-flex-box align-items-center app-transition-all">
-      <span class="icon app-flex-box align-items-center justify-content-center">
-        <i class="fa fa-angle-left"></i>
-      </span>
-      <span class="title">Nhà</span>
-    </li>
-    <li class="menu-item app-flex-box align-items-center app-transition-all">
-      <span class="icon app-flex-box align-items-center justify-content-center">
-        <i class="fa fa-angle-left"></i>
-      </span>
-      <span class="title">Tài sản khác</span>
-    </li>
-    <li class="menu-item app-flex-box align-items-center app-transition-all">
-      <span class="icon app-flex-box align-items-center justify-content-center">
-        <i class="fa fa-angle-left"></i>
-      </span>
-      <span class="title">Đánh giá</span>
-    </li>
-    <li class="menu-item app-flex-box align-items-center app-transition-all">
-      <span class="icon app-flex-box align-items-center justify-content-center">
-        <i class="fa fa-angle-left"></i>
-      </span>
-      <span class="title">Tài sản so sánh</span>
-    </li>
-    <li class="menu-item app-flex-box align-items-center app-transition-all">
-      <span class="icon app-flex-box align-items-center justify-content-center">
-        <i class="fa fa-angle-left"></i>
-      </span>
-      <span class="title">Kết luận</span>
-    </li>
-    <li class="menu-item app-flex-box align-items-center app-transition-all">
-      <span class="icon app-flex-box align-items-center justify-content-center">
-        <i class="fa fa-angle-left"></i>
-      </span>
-      <span class="title">Nội dung trao đổi</span>
-    </li>
-    <li class="menu-item app-flex-box align-items-center app-transition-all">
-      <span class="icon app-flex-box align-items-center justify-content-center">
-        <i class="fa fa-angle-left"></i>
-      </span>
-      <span class="title">Tác nghiệp</span>
+      <span class="title">{{menuItem.getTitle()}}</span>
     </li>
   </ul>
 </div>
