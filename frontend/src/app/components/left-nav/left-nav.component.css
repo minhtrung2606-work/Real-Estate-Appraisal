@@ -34,10 +34,14 @@
   color: #eefcff;
   font-weight: bold;
 }
+.app-left-nav-container .app-left-nav-menu-item.active .menu-item-list {
+  display: block;
+}
 .app-left-nav-container .menu-item-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: none;
 }
 .app-left-nav-container .menu-item {
   min-height: 40px;
