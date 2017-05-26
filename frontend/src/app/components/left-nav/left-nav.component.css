@@ -34,17 +34,22 @@
   color: #eefcff;
   font-weight: bold;
 }
-.app-left-nav-container .app-left-nav-menu-item.active .menu-item-list {
-  display: block;
+.app-left-nav-container .app-left-nav-menu-item.active .menu-item {
+  visibility: visible;
+  min-height: 40px;
+  height: auto;
+  opacity: 1;
 }
 .app-left-nav-container .menu-item-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: none;
 }
 .app-left-nav-container .menu-item {
-  min-height: 40px;
+  visibility: hidden;
+  min-height: 0;
+  height: 0;
+  opacity: 0;
 }
 .app-left-nav-container .header:hover,
 .app-left-nav-container .menu-item:hover,

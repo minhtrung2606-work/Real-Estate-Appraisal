@@ -10,7 +10,7 @@
       </span>
     </div>
     <ul class="menu-item-list bg-color" *ngIf="menuItem.hasMenuItemList()">
-      <li class="menu-item app-flex-box align-items-center" *ngFor="let subMenuItem of menuItem.getMenuItemList()"
+      <li class="menu-item app-transition-all app-flex-box align-items-center" *ngFor="let subMenuItem of menuItem.getMenuItemList()"
         (click)="onSubMenuItemClicked(subMenuItem)" [ngClass]="{'active': isSubMenuItemActivated(subMenuItem)}">
         <span class="icon app-flex-box justify-content-center"><i class="fa fa-angle-right"></i></span>
         <span class="title">{{subMenuItem.getTitle()}}</span>
