@@ -10,7 +10,7 @@
         <span class="title">{{subMenuItem.getTitle()}}</span>
 
         <div class="icon app-flex-box justify-content-center align-right" *ngIf="subMenuItem.hasStatisticInfo()">
-          <span class="statistic app-request-record">{{subMenuItem.getStatisticInfo()}}</span>
+          <span class="statistic {{subMenuItem.getStatisticInfoClass()}}">{{subMenuItem.getStatisticInfo()}}</span>
         </div>
       </li>
     </ul>
