@@ -31,4 +31,14 @@ export class LeftNavMenuItem {
   getTitle(): string {
     return this.title;
   }
+
+  equals(o: any): boolean {
+    if (this === o) {
+      return true;
+    } else if (o instanceof LeftNavMenuItem) {
+      return o.getTitle() === this.title;
+    } else {
+      return false;
+    }
+  }
 }

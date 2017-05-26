@@ -12,12 +12,24 @@ export class LeftNavComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'app-left-nav';
   @Input() itemList: Array<LeftNavMenuItem>;
 
-  constructor() { }
+  private currentLeftNavMenuItem:LeftNavMenuItem;
+
+  constructor() {
+    this.currentLeftNavMenuItem = null;
+  }
 
   ngOnInit() {
   }
 
   getItemList(): Array<LeftNavMenuItem> {
     return this.itemList;
+  }
+
+  onMenuItemClick(menuItem): void {
+    this.currentLeftNavMenuItem = menuItem;
+  }
+
+  isActivated(menuItem: LeftNavMenuItem): boolean {
+    return this.currentLeftNavMenuItem && this.currentLeftNavMenuItem.equals(menuItem);
   }
 }
