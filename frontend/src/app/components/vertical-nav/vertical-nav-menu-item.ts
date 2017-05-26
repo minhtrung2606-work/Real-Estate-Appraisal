@@ -14,4 +14,14 @@ export class VerticalNavMenuItem {
   getFaIconClass(): string {
     return this.faIconClass;
   }
+
+  equals(o: any): boolean {
+    if (this === o) {
+      return true;
+    } else if (o instanceof VerticalNavMenuItem) {
+      return o.getTitle() === this.title;
+    } else {
+      return false;
+    }
+  }
 }

@@ -1,7 +1,9 @@
 <div class="app-vertical-nav-container">
   <ul class="menu-item-list">
     <li class="menu-item app-flex-box align-items-center app-transition-all"
-      *ngFor="let menuItem of getItemList()">
+        *ngFor="let menuItem of getItemList()"
+        (click)="onMenuItemClicked(menuItem)"
+        [ngClass]="{'active': isMenuItemActivated(menuItem)}">
       <span class="icon app-flex-box align-items-center justify-content-center">
         <i class="fa {{menuItem.getFaIconClass() || defaultFaIconClass}}"></i>
       </span>

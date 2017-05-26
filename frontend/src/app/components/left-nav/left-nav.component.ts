@@ -28,7 +28,7 @@ export class LeftNavComponent implements OnInit {
     return this.itemList;
   }
 
-  onMenuItemClicked(menuItem): void {
+  onMenuItemClicked(menuItem: LeftNavMenuItem): void {
     if (this.isMenuItemActivated(menuItem)) {
       this.currentLeftNavMenuItem = null;
     } else {
@@ -36,7 +36,7 @@ export class LeftNavComponent implements OnInit {
     }
   }
 
-  onSubMenuItemClicked(subMenuItem:LeftNavSubMenuItem): void {
+  onSubMenuItemClicked(subMenuItem: LeftNavSubMenuItem): void {
     this.currentLeftNavSubMenuItem = subMenuItem;
   }
 

@@ -12,6 +12,8 @@ export class VerticalNavComponent implements OnInit {
   @Input() itemList: Array<VerticalNavMenuItem>;
   @Input() defaultFaIconClass: string;
 
+  private currentVerticalNavMenuItem: VerticalNavMenuItem;
+
   constructor() { }
 
   ngOnInit() {
@@ -19,6 +21,14 @@ export class VerticalNavComponent implements OnInit {
 
   getItemList(): Array<VerticalNavMenuItem> {
     return this.itemList;
+  }
+
+  onMenuItemClicked(menuItem: VerticalNavMenuItem): void {
+    this.currentVerticalNavMenuItem = menuItem;
+  }
+
+  isMenuItemActivated(menuItem: any): boolean {
+    return this.currentVerticalNavMenuItem && this.currentVerticalNavMenuItem.equals(menuItem);
   }
 
 }
