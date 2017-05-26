@@ -1,0 +1,35 @@
+.app-vertical-nav-container {
+  position: relative;
+}
+
+/*ELEMENT*/
+.app-vertical-nav-container .menu-item-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.app-vertical-nav-container .menu-item {
+  min-height: 40px;
+  margin-bottom: 2px;
+  background-color: white;
+}
+.app-vertical-nav-container .icon {
+  min-width: 40px;
+}
+.app-vertical-nav-container .menu-item .title {
+  padding: 8px 0;
+}
+.app-vertical-nav-container .menu-item.active {
+  border: 2px solid transparent;
+}
+
+/*STYLE*/
+.app-vertical-nav-container * {
+  color: #524542;
+}
+.app-vertical-nav-container .menu-item.active {
+  background-color: #76bae1;
+}
+.app-vertical-nav-container .menu-item.active * {
+  color: #e6fdff;
+}
