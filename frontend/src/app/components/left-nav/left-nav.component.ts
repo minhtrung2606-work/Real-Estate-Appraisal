@@ -1,5 +1,6 @@
 import { Component, OnInit, HostBinding, Input } from '@angular/core';
 import { LeftNavMenuItem } from './left-nav-menu-item'
+import { LeftNavSubMenuItem } from './left-nav-sub-menu-item';
 
 @Component({
   selector: 'app-left-nav',
@@ -12,10 +13,12 @@ export class LeftNavComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'app-left-nav';
   @Input() itemList: Array<LeftNavMenuItem>;
 
-  private currentLeftNavMenuItem:LeftNavMenuItem;
+  private currentLeftNavMenuItem: LeftNavMenuItem;
+  private currentLeftNavSubMenuItem: LeftNavSubMenuItem;
 
   constructor() {
     this.currentLeftNavMenuItem = null;
+    this.currentLeftNavSubMenuItem = null;
   }
 
   ngOnInit() {
@@ -25,11 +28,19 @@ export class LeftNavComponent implements OnInit {
     return this.itemList;
   }
 
-  onMenuItemClick(menuItem): void {
+  onMenuItemClicked(menuItem): void {
     this.currentLeftNavMenuItem = menuItem;
   }
 
-  isActivated(menuItem: LeftNavMenuItem): boolean {
+  onSubMenuItemClicked(subMenuItem:LeftNavSubMenuItem): void {
+    this.currentLeftNavSubMenuItem = subMenuItem;
+  }
+
+  isMenuItemActivated(menuItem: LeftNavMenuItem): boolean {
     return this.currentLeftNavMenuItem && this.currentLeftNavMenuItem.equals(menuItem);
+  }
+
+  isSubMenuItemActivated(subMenuItem: LeftNavSubMenuItem): boolean {
+    return this.currentLeftNavSubMenuItem && this.currentLeftNavSubMenuItem.equals(subMenuItem);
   }
 }

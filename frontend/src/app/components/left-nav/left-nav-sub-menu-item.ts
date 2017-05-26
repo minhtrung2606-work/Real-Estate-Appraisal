@@ -24,4 +24,14 @@ export class LeftNavSubMenuItem {
   getStatisticInfoClass(): string {
     return this.statisticClass;
   }
+
+  equals(o: any): boolean {
+    if (this === o) {
+      return true;
+    } else if (o instanceof LeftNavSubMenuItem) {
+      return o.getTitle() === this.title;
+    } else {
+      return false;
+    }
+  }
 }
