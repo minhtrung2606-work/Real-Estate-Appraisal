@@ -1,3 +1,7 @@
-<!--<app-left-nav [itemList]="getLeftNavMenuItemList()"></app-left-nav>-->
-<app-vertical-nav [itemList]="getVerticalNavMenuItemList()"
-                  [defaultFaIconClass]="'fa-angle-left'"></app-vertical-nav>
+<div class="app-flex-box app-full-v-height">
+  <app-left-nav [itemList]="getLeftNavMenuItemList()"></app-left-nav>
+  <div class="app-vertical-width align-right app-padding-of-8">
+    <app-vertical-nav [itemList]="getVerticalNavMenuItemList()"
+                      [defaultFaIconClass]="'fa-angle-left'"></app-vertical-nav>
+  </div>
+</div>

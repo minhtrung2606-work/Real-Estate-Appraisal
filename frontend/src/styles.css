@@ -6,9 +6,16 @@
 .app-full-v-height {
   height: 100vh;
 }
-.app-bg-color {
-  background-color: #76badf;
+.app-vertical-width {
+  width: 250px;
 }
+.app-bg-color {
+  background-color: #dbe1e2;
+}
+.app-padding-of-8 {
+  padding: 8px;
+}
+
 .statistic.app-default-statistic {
   color: #bcf4f8;
   background-color: #2789b7;
