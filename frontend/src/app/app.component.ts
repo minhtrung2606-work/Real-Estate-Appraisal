@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LeftNavMenuItem } from './components/left-nav/left-nav-menu-item';
 import { LeftNavSubMenuItem } from './components/left-nav/left-nav-sub-menu-item';
+import { VerticalNavMenuItem } from './components/vertical-nav/vertical-nav-menu-item';
 
 let leftNavJson = [
   {
@@ -38,20 +39,44 @@ let leftNavJson = [
   }
 ];
 
+let verticalNavJson = [
+  { title: 'Pháp lý' },
+  { title: 'Tài liệu đính kèm' },
+  { title: 'Vị trí' },
+  { title: 'Đất' },
+  { title: 'Nhà' },
+  { title: 'Tài sản khác' },
+  { title: 'Đánh giá' },
+  { title: 'Tài sản so sánh' },
+  { title: 'Kết luận' },
+  { title: 'Nội dung trao đổi' },
+  { title: 'Tác nghiệp' }
+];
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  private leftNavMenuItemList:Array<LeftNavMenuItem>;
+  private leftNavMenuItemList: Array<LeftNavMenuItem>;
+  private verticalNavMenuItemList: Array<VerticalNavMenuItem>;
 
   constructor() {
     this.leftNavMenuItemList = constructLeftNav(leftNavJson);
+    this.verticalNavMenuItemList = constructVerticalNav(verticalNavJson);
+  }
+
+  getLeftNavMenuItemList(): Array<LeftNavMenuItem> {
+    return this.leftNavMenuItemList;
+  }
+
+  getVerticalNavMenuItemList(): Array<VerticalNavMenuItem> {
+    return this.verticalNavMenuItemList;
   }
 }
 
-function constructLeftNav(leftNavJson) {
+function constructLeftNav(leftNavJson: Array<any>) {
   let leftNavItemList = [];
   let leftNavItemJson;
   while ((leftNavItemJson = leftNavJson.shift())) {
@@ -60,10 +85,23 @@ function constructLeftNav(leftNavJson) {
       let leftNavSubMenuItemJson, i = 0, iLen = leftNavItemJson.menuItemList.length;
       for (; i < iLen; i++) {
         leftNavSubMenuItemJson = leftNavItemJson.menuItemList[i];
-        leftNavItem.addMenuItem(new LeftNavSubMenuItem(leftNavSubMenuItemJson.title, leftNavSubMenuItemJson.count, leftNavSubMenuItemJson.statisticClass));
+        var leftNavSubMenuItem = new LeftNavSubMenuItem(
+          leftNavSubMenuItemJson.title,
+          leftNavSubMenuItemJson.count,
+          leftNavSubMenuItemJson.statisticClass);
+        leftNavItem.addMenuItem(leftNavSubMenuItem);
       }
     }
     leftNavItemList.push(leftNavItem);
   }
   return leftNavItemList;
+}
+
+function constructVerticalNav(verticalNavJson: Array<any>): Array<VerticalNavMenuItem> {
+  let verticalNavItemList = [];
+  let verticalNavItemJson;
+  while ((verticalNavItemJson = verticalNavJson.shift())) {
+    verticalNavItemList.push(new VerticalNavMenuItem(verticalNavItemJson.title));
+  }
+  return verticalNavItemList;
 }
