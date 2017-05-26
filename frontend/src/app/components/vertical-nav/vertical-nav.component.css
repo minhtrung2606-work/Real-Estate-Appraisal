@@ -1,5 +1,6 @@
 .app-vertical-nav-container {
   position: relative;
+  cursor: pointer;
 }
 
 /*ELEMENT*/
@@ -19,6 +20,7 @@
 .app-vertical-nav-container .menu-item .title {
   padding: 8px 0;
 }
+.app-vertical-nav-container .menu-item:hover .title,
 .app-vertical-nav-container .menu-item.active .title {
   font-weight: bold;
 }
@@ -28,9 +30,11 @@
   font-size: 12px;
   color: #524542;
 }
+.app-vertical-nav-container .menu-item:hover,
 .app-vertical-nav-container .menu-item.active {
   background-color: #76bae1;
 }
+.app-vertical-nav-container .menu-item:hover *,
 .app-vertical-nav-container .menu-item.active * {
   color: #e6fdff;
 }
