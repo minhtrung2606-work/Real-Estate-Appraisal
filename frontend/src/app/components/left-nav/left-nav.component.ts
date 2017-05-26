@@ -17,4 +17,8 @@ export class LeftNavComponent implements OnInit {
   ngOnInit() {
   }
 
+  hasMenuItemList(menuItem:LeftNavMenuItem): boolean {
+    return menuItem && menuItem.hasMenuItemList();
+  }
+
 }

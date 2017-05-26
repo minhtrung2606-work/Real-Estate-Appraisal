@@ -15,4 +15,12 @@ export class LeftNavMenuItem {
     this.menuItemList.push(subMenuItem);
     return this;
   }
+
+  hasMenuItemList(): boolean {
+    return this.menuItemList.length > 0;
+  }
+
+  getMenuItemList(): Array<LeftNavSubMenuItem> {
+    return this.menuItemList;
+  }
 }

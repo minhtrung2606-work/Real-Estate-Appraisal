@@ -9,7 +9,7 @@ let leftNavJson = [
   },
   {
     title: 'Hồ sơ',
-    faIconClass: 'fa-envelop',
+    faIconClass: 'fa-envelope',
     menuItemList: [
       { title: 'HS yêu cầu' },
       { title: 'HS chờ phân công' },
