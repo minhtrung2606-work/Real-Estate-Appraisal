@@ -4,6 +4,9 @@
     <div class="header app-transition-all app-flex-box align-items-center">
       <span class="icon app-flex-box justify-content-center"><i class="fa {{menuItem.getFaIconClass()}}"></i></span>
       <span class="title">{{menuItem.getTitle()}}</span>
+      <span class="icon app-flex-box justify-content-center align-right" *ngIf="menuItem.hasMenuItemList()">
+         <i class="fa fa-plus-circle"></i>
+      </span>
     </div>
     <ul class="menu-item-list bg-color" *ngIf="menuItem.hasMenuItemList()">
       <li class="menu-item app-flex-box align-items-center" *ngFor="let subMenuItem of menuItem.getMenuItemList()"
