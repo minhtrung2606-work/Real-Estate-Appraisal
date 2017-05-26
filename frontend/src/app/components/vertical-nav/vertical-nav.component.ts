@@ -10,11 +10,9 @@ export class VerticalNavComponent implements OnInit {
   abstract;
 
   @Input() itemList: Array<VerticalNavMenuItem>;
-  public defaultFaIconClass: string;
+  @Input() defaultFaIconClass: string;
 
-  constructor() {
-    this.defaultFaIconClass = 'fa-angle-left';
-  }
+  constructor() { }
 
   ngOnInit() {
   }
