@@ -12,6 +12,7 @@ export class LeftNavComponent implements OnInit {
 
   @HostBinding('attr.class') cssClass = 'app-left-nav';
   @Input() itemList: Array<LeftNavMenuItem>;
+  @Input() collapsed: boolean;
 
   private currentLeftNavMenuItem: LeftNavMenuItem;
   private currentLeftNavSubMenuItem: LeftNavSubMenuItem;
@@ -46,5 +47,9 @@ export class LeftNavComponent implements OnInit {
 
   isSubMenuItemActivated(subMenuItem: LeftNavSubMenuItem): boolean {
     return this.currentLeftNavSubMenuItem && this.currentLeftNavSubMenuItem.equals(subMenuItem);
+  }
+
+  isCollapsed(): boolean {
+    return this.collapsed;
   }
 }

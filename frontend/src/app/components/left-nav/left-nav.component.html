@@ -1,4 +1,4 @@
-<div class="app-left-nav-container app-full-v-height">
+<div class="app-left-nav-container app-full-v-height" [ngClass]="{'collapsed': isCollapsed()}">
   <div class="app-left-nav-menu-item bg-color text-color" *ngFor="let menuItem of getItemList()"
        [ngClass]="{'active': isMenuItemActivated(menuItem)}">
     <div class="header app-transition-all app-flex-box align-items-center"

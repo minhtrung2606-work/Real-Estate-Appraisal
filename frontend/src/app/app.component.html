@@ -1,5 +1,6 @@
 <div class="app-flex-box app-full-v-height">
-  <app-left-nav [itemList]="getLeftNavMenuItemList()"></app-left-nav>
+  <app-left-nav [itemList]="getLeftNavMenuItemList()" [collapsed]="leftNavCollapsed"></app-left-nav>
+  <button (click)="onBarsBtnClicked()"><i class="fa fa-bars"></i></button>
   <div class="app-vertical-width align-right app-padding-of-8">
     <app-vertical-nav [itemList]="getVerticalNavMenuItemList()"
                       [defaultFaIconClass]="'fa-angle-left'"></app-vertical-nav>

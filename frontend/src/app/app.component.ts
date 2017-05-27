@@ -61,6 +61,7 @@ let verticalNavJson = [
 export class AppComponent {
   private leftNavMenuItemList: Array<LeftNavMenuItem>;
   private verticalNavMenuItemList: Array<VerticalNavMenuItem>;
+  private leftNavCollapsed: boolean;
 
   constructor() {
     this.leftNavMenuItemList = constructLeftNav(leftNavJson);
@@ -73,6 +74,10 @@ export class AppComponent {
 
   getVerticalNavMenuItemList(): Array<VerticalNavMenuItem> {
     return this.verticalNavMenuItemList;
+  }
+
+  onBarsBtnClicked(): void {
+    this.leftNavCollapsed = !this.leftNavCollapsed;
   }
 }
 
